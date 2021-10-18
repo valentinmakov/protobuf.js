@@ -53,9 +53,11 @@
     "@protobufjs/utf8": "^1.1.0",
     "@types/long": "^4.0.0",
     "@types/node": "^10.1.0",
+    "events": "3.3.0",
     "long": "^4.0.0"
   },
   "devDependencies": {
+    "@types/events": "3.0.0",
     "benchmark": "^2.1.4",
     "browserify": "^16.2.2",
     "browserify-wrap": "^1.0.2",

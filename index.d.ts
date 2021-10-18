@@ -1,5 +1,5 @@
 // DO NOT EDIT! This is a generated file. Edit the JSDoc in src/*.js instead and run 'npm run types'.
-
+import * as EventEmitter from 'events';
 export as namespace protobuf;
 
 /**
@@ -1343,7 +1343,7 @@ export namespace rpc {
 
 type RPCUnaryCall = (method: (Method|rpc.ServiceMethod<Message<{}>, Message<{}>>), requestData: Uint8Array, callback: RPCImplCallback) => void;
 // TODO: check if all args are valid
-type RPCServerStreamCall = (method: (Method|rpc.ServiceMethod<Message<{}>, Message<{}>>), requestData: Uint8Array, decodeFn: (responseData: Uint8Array) => protobuf.Message) => util.EventEmitter;
+type RPCServerStreamCall = (method: (Method|rpc.ServiceMethod<Message<{}>, Message<{}>>), requestData: Uint8Array, decodeFn: (responseData: Uint8Array) => protobuf.Message) => util.EventEmitter | Promise<util.EventEmitter | EventEmitter>;
 type RPCClientStreamCall = (method: (Method|rpc.ServiceMethod<Message<{}>, Message<{}>>), encodeFn: (requestData: any) => Uint8Array, decodeFn: (responseData: Uint8Array) => protobuf.Message) => util.EventEmitter;
 type RPCBidiStreamCall = (method: (Method|rpc.ServiceMethod<Message<{}>, Message<{}>>), encodeFn: (requestData: any) => Uint8Array, decodeFn: (responseData: Uint8Array) => protobuf.Message) => util.EventEmitter;
 
